@@ -1,0 +1,210 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "./material.scss";
+@import "./roboto.scss";
+@import "./_variables.scss";
+@import "./_matselect-option.scss";
+@import "./_mat-typeahead.scss";
+@import "./mat-grid.scss";
+@import "./datepicker.scss";
+@import "./timepicker.scss";
+
+body {
+  font-family: $roboto-slab-font;
+  margin: auto;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.dropdown {
+  position: relative;
+
+  &.open {
+    .dropdown-menu {
+      display: block;
+    }
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 200px;
+    padding: 0;
+    margin: 10px 0 0;
+    font-size: $dropdown-font;
+    text-align: left;
+    list-style: none;
+    background-color: $white;
+    background-clip: padding-box;
+    border: 1px solid $primary-outline;
+    box-shadow: $header-footer-box-shadow;
+    z-index: 2;
+
+    &.right {
+      right: 0 !important;
+      left: inherit !important;
+    }
+
+    &.left {
+      left: 0 !important;
+      right: inherit !important;
+    }
+
+    .menu-list {
+      padding: 0;
+
+      li {
+        padding: 5px;
+
+        &:hover {
+          background-color: $hover-blue;
+        }
+
+        a {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+.form-group {
+  width: 100%;
+
+  label {
+    color: $light-blue3;
+    font-size: $profile-name-font;
+    font-family: $roboto-font;
+    font-weight: normal;
+  }
+
+  .form-control {
+    display: block;
+    width: 100%;
+    font-size: $font-size;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $black;
+    background-color: $white;
+    background-clip: padding-box;
+    border: 1px solid $light-blue3;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+
+    &.input {
+      border-radius: 0;
+      padding: 0px;
+      padding-left: 10px;
+      font-weight: normal;
+      color: $black;
+      font-size:  $font-size;
+      font-family: $roboto-font;
+      width: calc(100% - 12px);
+      height: $button-height;
+      background-color: $white;
+      background-clip: padding-box;
+      border: 1px solid $primary-outline;
+      -webkit-transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+      transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+      overflow: visible;
+    }
+
+    &:focus {
+      border-color: $primary-outline;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  .input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 10px;
+  }
+
+  .time-picker {
+    width: 100% !important;
+  }
+
+  .date-picker {
+    width: 100% !important;
+  }
+
+}
+
+  .time-group {
+    width: 75% !important;
+  }
+.nav > li > a:focus,
+.nav > li > a:hover {
+  background-color: transparent;
+}
+
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover {
+  background-color: transparent;
+}
+
+.disable-clear-btn {
+  opacity: 0.2 !important;
+  pointer-events: none;
+}
+
+.disable-search-btn {
+  opacity: 0.2 !important;
+  pointer-events: none;
+}
+
+.cdk-overlay-pane {
+  position: absolute;
+  transform: none !important;
+  pointer-events: auto;
+  box-sizing: border-box;
+  z-index: 1000;
+  display: -webkit-box;
+  display: flex;
+  max-height: 100%;
+  justify-content: space-around;
+}
+
+.show {
+  display: block;
+}
+
+.disable {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.bs-chevron {
+  border-width: 2px 0px 0 2px !important;
+}
+
+.show {
+  display: block;
+}
+
+.disable {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.bs-chevron {
+  border-width: 2px 0px 0 2px !important;
+}

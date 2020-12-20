@@ -1,0 +1,146 @@
+@import "../../styles/_variables.scss";
+
+audit-search-report-pane {
+  display: flex;
+  border: 1px solid $primary-outline;
+  height: 100%;
+  width: auto;
+  background-color: $white;
+  border-radius: 5px;
+  padding: 30px;
+
+  .mat-grid-tile{
+    overflow: visible;
+  }
+
+  .search-panel {
+    width: 100%;
+    height: 100%;
+    
+    .title {
+      font-size: $title-font;
+      line-height: $title-font;
+      color: $black;
+      font-family: $roboto-font;
+      font-weight: bold;
+      margin: 0;
+      width: 100%;
+    }
+
+    .user-label {
+      margin-top: 10px;
+    }
+
+    .display-input {
+  
+      .form-group {
+        .input-group {
+          &.icon {
+            border: 1px solid $primary-outline;
+            grid-template-columns: 30px 1fr;
+            align-items: center;
+            display: grid;
+          }
+
+          .icon {
+            width: auto;
+            height: 22px;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            &.date {
+              background-image: url("/assets/icons/calendar-grey.svg");
+
+              &.selected {
+                background-image: url("/assets/icons/calendar-black.svg");
+              }
+            }
+
+            &.time {
+              background-image: url("/assets/icons/clock-grey.svg");
+
+              &.selected {
+                background-image: url("/assets/icons/clock-black.svg");
+              }
+            }
+          }
+
+          .form-control.time {
+            width: calc(50%-12px);
+            border: 0;
+          }
+
+          .form-control.date {
+            width: calc(100% - 12px);
+            height: $button-height;
+            border: 1px;
+          }
+        }
+      }
+    }
+
+    .adjust-picker {
+      margin-left: -50px;
+    }
+
+    .buttons {
+      width: 100%;
+
+      .search {
+        width: 100%;
+        border: none;
+        padding: 5px 15px;
+        background-color: $primary;
+        color: $white;
+        text-transform: capitalize;
+        font-family: $roboto-font;
+        font-weight: normal;
+        cursor: pointer;
+        height: $button-height;
+        font-size: $font-size;
+
+        &:hover {
+          background-color: $search-hover;
+        }
+
+        &:focus {
+          background-color: $search-clicked;
+          outline: 0;
+        }
+      } 
+
+      .clear {
+        width: 100%;
+        border: 1px solid $primary-outline;
+        padding: 5px 15px;
+        background-color: $hover-blue;
+        color: $light-blue3;
+        text-transform: capitalize;
+        font-family: $roboto-font;
+        font-weight: normal;
+        font-size: $font-size;
+        height: $button-height;
+
+        &:hover {
+          background-color: $clear-hover;
+        }
+
+        &:focus {
+          background-color: $clear-clicked;
+          outline: 0;
+        }
+      }
+    }
+  }
+
+  .backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+}

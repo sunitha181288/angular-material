@@ -1,0 +1,60 @@
+@import "../../styles/_variables.scss";
+
+.footer {
+  display: flex;
+  font-size: $profile-name-font;
+  font-family: $roboto-font;
+  background-color: $white;
+  box-shadow: $header-footer-box-shadow;
+  z-index: 2;
+  min-height: $footer-height;
+  height: $footer-height;
+  align-items: center;
+  position: fixed;
+  padding: 5px 20px 0 20px;
+  width: 100%;
+  bottom: 0;
+
+  .toolbar-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+  }
+
+  .brand-name {
+    display: flex !important;
+    align-items: center;
+    
+    img.footer-mat-logo {
+      padding-right: 10px;
+    }
+  }
+
+  .footer-brand {
+    color: $light-blue3;
+    text-decoration: none;
+  }
+
+  .footer-pull-right {
+    color: $light-blue3;
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding-right: 20px;
+    a {
+      color: $light-blue3;
+      text-decoration: none;
+    }
+  }
+
+  .footer-items {
+    margin-left: 20px;
+    padding: 0 1px;
+    float: right;
+  }
+
+  .copy-right-permission {
+    padding-left: 12px;
+  }
+}

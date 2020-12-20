@@ -1,0 +1,137 @@
+.mat-select-panel-wrap {
+    width: 100%;
+    position: absolute;
+    margin-top: 40px;
+    transform: none !important;
+  }
+  
+  .mat-form-field-appearance-legacy .mat-form-field-underline {
+    height: 0px !important;
+  }
+  
+  .mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: none !important;
+  }
+  
+  .mat-form-field-appearance-legacy .mat-form-field-ripple {
+    top: 0;
+    height: 0px !important;
+    overflow: hidden;
+  }
+  
+  .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+    height: 35px !important;
+    padding-bottom: 0px;
+    border: 1px solid $primary-outline;
+    width: 200px;
+    background-color: $hover-blue;
+  }
+  
+  .mat-form-field-wrapper {
+    position: absolute;
+  }
+  
+  .mat-select-trigger {
+    display: inline-table;
+    cursor: pointer;
+    position: absolute;
+    box-sizing: border-box;
+    margin-top: -25px;
+  }
+  
+  .mat-form-field-appearance-legacy .mat-form-field-infix {
+    padding-top: 0px;
+    padding-left: 10px;
+    margin-top: -5px;
+  }
+  
+  .mat-select-panel {
+    overflow: none;
+    padding-top: 0;
+    position: absolute;
+    padding-bottom: 0;
+    max-height: 256px;
+    border-radius: 0px !important;
+    min-width: 100%;
+    font-size: $font-size !important;
+  }
+  
+  .mat-option.mat-option-disabled :hover {
+    background-color: $hover-blue;
+  }
+  
+  .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: $white;
+    background-color: $primary;
+  }
+  .mat-option:hover {
+    background-color: $primary-outline;
+  }
+  
+  .mat-select-panel .mat-option {
+    height: 35px !important;
+  }
+  
+  .mat-select-panel:not([class*=mat-elevation-z]) {
+    box-shadow: $dropdown-box-shadow;
+    margin-left: -10px;
+  }
+  
+  .mat-option.mat-active {
+    background: $primary;
+    color: $white;
+  }
+  
+  .mat-option.mat-active:hover {
+    background: $primary;
+    color: $white;
+  }
+  
+  .mat-option[aria-disabled=true] {
+    background-color: $hover-blue !important;
+  }
+  
+  .mat-select-arrow {
+    color: transparent;
+  }
+  
+  .mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+    color: transparent;
+  }
+  
+  .select-chevron {
+    float: right;
+    margin-top: -12px;
+    margin-right: 10px;
+  }
+  
+  .mat-select-value {
+    font-size: $font-size;
+  }
+  
+  .mat-form-field-flex {
+    padding-left: 10px;
+  }
+  
+  .mat-form-field .mat-form-field-label {
+    font-size:  $font-size;
+    margin-top: -4px;
+  }
+  
+  .mat-form-field.mat-focused .mat-form-field-label {
+    color: #7d7d7f !important;
+    font-size:  $font-size;
+    margin-top: -4px;
+  }
+  
+  .mat-form-field.mat-focused .mat-form-field-wrapper {
+    background-color : $dropdown-click-color!important;
+  }
+  
+  .align-mat-button {
+    float: right !important;
+  }
+  
+  .mat-select-trigger {
+    margin-left: -10px;
+  }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="18px" viewBox="0 0 21 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="NavBar" transform="translate(-1160.000000, -18.000000)" fill-rule="nonzero" stroke="#000000">
+            <g id="Group" transform="translate(1160.000000, 18.000000)">
+                <path d="M10.2315984,1.46577912 C10.2095086,1.42854029 10.178126,1.39767689 10.1405239,1.37621132 C10.0206152,1.3077602 9.86791934,1.34947481 9.79946822,1.46938351 L1.00440818,16.8760583 C0.982856981,16.9138104 0.971522085,16.9565296 0.971522085,17 C0.971522085,17.1380712 1.0834509,17.25 1.22152208,17.25 L19.1557125,17.25 C19.2005974,17.25 19.2446546,17.2379159 19.2832586,17.2150163 C19.4020088,17.1445745 19.4411705,16.9912041 19.3707287,16.8724539 L10.2315984,1.46577912 Z" id="Rectangle-28" stroke-width="1.5"></path>
+                <circle id="Oval-5" fill="#FFFFFF" cx="10" cy="14" r="1"></circle>
+                <path d="M10,7 L10,11.5" id="Line-27" stroke-width="1.5" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>

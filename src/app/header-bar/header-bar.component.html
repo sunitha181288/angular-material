@@ -1,0 +1,98 @@
+<mat-toolbar class="top-navbar">
+  <mat-toolbar-row class="toolbar-row no-padding">
+    <div class="header-container">
+      <ul class="nav navbar-links">
+        <li class="app-name">
+          <img class="material-icons header-mat-logo"/>
+          <a>Angular Material</a>
+        </li>
+        <li class="nav-link sub-menu dashboard">
+          <a class="label label-dashboard no-padding">
+            Dashboard
+          </a>
+        </li>
+        <li dropdown class="nav-link sub-menu dropdown no-padding shipment" (click)="onSelectNav(SHIPMENT_MENU_ITEM)" dropdownToggle role="button" [ngClass]="{'active': SHIPMENT_MENU_ITEM == activeLink}">
+          <a href="#" class="label label-dashboard no-padding">
+             Vehicle
+            <img class="material-icons chevron-down-torq" src="assets/icons/Cheveron SVG.svg" />
+          </a>
+          <div *dropdownMenu class="dropdown-menu left">
+            <ul class="menu-list">
+              <li class="row-item align-menu">
+                <a class="dropdown-item">Bike</a>
+              </li>
+              <li class="row-item align-menu">
+                <a class="dropdown-item">Car</a>
+              </li>
+              <li class="row-item align-menu">
+                <a class="dropdown-item">Bus</a>
+              </li>
+              <li class="row-item align-menu">
+                <a class="dropdown-item">Scooter</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li dropdown class="nav-link sub-menu dropdown no-padding admin" (click)="onSelectNav(ADMIN_MENU_ITEM)" dropdownToggle role="button" [ngClass]="{'active': ADMIN_MENU_ITEM == activeLink}">
+          <a href="#" class="label label-admin no-padding">
+            Admin
+          </a>
+          <img class="material-icons chevron-down-torq" src="assets/icons/Cheveron SVG.svg" />
+          <div *dropdownMenu class="dropdown-menu left">
+            <ul class="menu-list">
+              <li class="row-item align-menu">
+                <a class="dropdown-item">Management</a>
+              </l
+              <li class="row-item active align-menu">
+                <a class="dropdown-item">Audit</a>
+              </li>
+              <li class="row-item align-menu">
+                <a class="dropdown-item">Settings</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="header-container bars">
+      <ul class="nav navbar-links profile">
+        <li class="dropdown" dropdown>
+          <div class="alert no-margin no-padding" dropdownToggle role="button">
+            <span class="icon"><i></i></span>
+          </div>
+          <div *dropdownMenu class="dropdown-menu right">
+            <ul class="menu-list">
+              <li class="row-item align-menu unread-msg">
+                <a class="dropdown-item">No unread messages</a>
+              </li>
+              <li class="row-item align-menu">
+                <a class="dropdown-item">View All Messages</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="dropdown" dropdown>
+          <div class="message" dropdownToggle role="button">
+            <span class="icon"><i></i></span>
+          </div>
+          <div *dropdownMenu class="dropdown-menu right">
+            <ul class="menu-list">
+              <li class="row-item align-menu unread-msg">
+                <a class="dropdown-item" href="#">No unread messages</a>
+              </li>
+              <li class="row-item align-menu">
+                <a class="dropdown-item" href="#">View All Messages</a>
+              </li>
+              <li class="row-item align-menu">
+                <a class="dropdown-item">View All Files</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <div class="profile-name">
+          <span>SA</span>
+        </div>
+      </ul>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,191 @@
+@import "../../styles/_variables.scss";
+
+.top-navbar {
+  background-color: $white;
+  box-shadow: $header-footer-box-shadow;
+  z-index: 2;
+  min-height: $nav-height;
+  height: $nav-height;
+  padding: 0 20px;
+  position: relative;
+
+  .toolbar-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: $nav-height;
+  }
+
+  .unread-msg {
+    font-size: $minor-font;
+    border-bottom: 1px solid $primary-outline;
+  }
+
+  .header-container {
+    display: flex;
+    width: 100%;
+
+    &.bars {
+      justify-content: flex-end;
+    }
+
+    .navbar-links {
+      display: grid;
+      padding: 0;
+      grid-template-columns: auto auto auto auto;
+      list-style-type: none;
+      height: $nav-height;
+      margin: 0;
+
+      &:after,
+      &:before {
+        content: none;
+      }
+
+      &.profile {
+        grid-template-columns: auto auto auto;
+        grid-gap: 15px;
+      }
+
+      .right {
+        margin-top: 5px;
+      }
+
+      .profile-name {
+        background-color: $black;
+        border-radius: 50px;
+        width: 25px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 25px;
+        margin-top: 17px;
+        margin-right: 15px;
+
+        span {
+          color: $white;
+          font-size: $profile-name-font;
+        }
+      }
+
+      .align-menu {
+        padding: 0 20px 0 10px;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &.dropdown {
+          &.open {
+            .alert,
+            .message {
+              i {
+                background-color: $primary;
+              }
+            }
+          }
+
+          %bg-container {
+            mask-size: cover;
+            height: 25px;
+            display: block;
+            background-color: $black;
+            width: 25px;
+          }
+
+          .alert {
+            i {
+              @extend %bg-container;
+              mask: url("/assets/icons/alerts_torq.svg") no-repeat 100% 100%;
+            }
+          }
+
+          .message {
+            i {
+              @extend %bg-container;
+              mask: url("/assets/icons/Message SVG.svg") no-repeat 100% 100%;
+            }
+          }
+        }
+
+        &.row-item {
+          &.active {
+            background-color: $primary;
+
+            a {
+              color: $white;
+            }
+          }
+        }
+
+        &.sub-menu:hover {
+          a.label,
+          i {
+            color: $primary;
+          }
+
+          img.chevron-down-torq {
+            margin-left: 5px;
+            content: url("/assets/icons/cheveron_down_hovered.svg")!important;
+          }
+        }
+
+        &.active {
+          border-bottom: 5px solid $primary;
+        }
+
+        &.app-name {
+          a {
+            font-size: $font-size;
+            font-weight: bold;
+            font-family: $roboto-slab-font;
+            color: $primary;
+          }
+          img.header-mat-logo {
+            padding-right: 10px;
+          }
+        }
+
+        &.sub-menu {
+          a {
+            font-size: $font-size;
+            font-weight: normal;
+            font-family: $roboto-font;
+            color: $black;
+
+            &.active,
+            &:active,
+            &:focus,
+            &:hover {
+              background-color: transparent;
+            }
+          }
+
+          i {
+            margin-left: 5px;
+          }
+
+          img.chevron-down-torq {
+            margin-left: 5px;
+          }
+        }
+
+        &.dashboard {
+          margin-left: 40px;
+        }
+
+        &.admin,
+        &.shipment {
+          margin-left: 20px;
+        }
+
+        a {
+          text-decoration: none;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

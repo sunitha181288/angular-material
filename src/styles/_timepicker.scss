@@ -1,0 +1,58 @@
+
+.timepicker {
+    position: absolute;
+    top: 35px;
+    z-index: 1024;
+    box-shadow: $dropdown-box-shadow;
+    border: 1px solid $primary-outline;
+    height: auto;
+    left: 0;
+    right: 0;
+    background-color: $white;
+    display: none;
+    padding: 20px 15px;
+    margin-top: 10px
+  }
+  
+  .timepicker table {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .timepicker table tbody tr {
+    display: table;
+    width: 100%;
+  }
+  
+  .timepicker table tbody tr:nth-child(3) {
+    margin-top: 15px;
+  }
+  
+  .timepicker table tbody tr:nth-child(1) {
+    margin-bottom: 15px;
+  }
+  
+  .timepicker table tbody tr.text-center {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .timepicker table tbody tr td .btn.btn-link {
+    color: $black;
+  }
+  
+  .timepicker table tbody tr td .btn.btn-link span {
+    margin: auto;
+  }
+  
+  .timepicker table tbody tr td.form-group {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
+  
+  .timepicker table tbody tr td.form-group .form-control {
+    text-align: center;
+    padding: 0;
+    width: 35px;
+  }

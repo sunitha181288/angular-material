@@ -1,0 +1,61 @@
+@import "./variables.scss";
+
+.mat-datepicker-content {
+  display: block;
+  border-radius: 4px;
+  margin-left: -30px;
+  margin-top: 10px;
+}
+
+.mat-datepicker-content .mat-calendar {
+  width: 242px !important;
+  height: 300px !important;
+}
+
+.mat-calendar-body-today.mat-calendar-body-selected {
+  box-shadow: none;
+}
+
+.mat-calendar-body-today:not(.mat-calendar-body-selected) {
+  border-color: transparent;
+  background: $white!important;
+  color: $black;
+}
+
+.mat-calendar-body-cell-content {
+  border-radius: 0px!important;
+}
+
+.mat-datepicker-content .mat-calendar-next-button,
+.mat-datepicker-content .mat-calendar-previous-button,
+.mat-datepicker-toggle {
+  color: $black;
+}
+
+.mat-calendar-table-header {
+  color: $black;
+}
+
+.mat-calendar-table-header th {
+  font-size: $font-size;
+}
+
+.mat-calendar-period-button {
+  font-size: $font-size;
+  font-weight: bold;
+  color: $black;
+}
+
+.mat-calendar-body-label,
+.mat-calendar-period-button {
+  font-size: $font-size;
+  font-weight: normal;
+}
+
+.mat-calendar-body {
+  font-size: $font-size;
+}
+
+.mat-calendar-body-selected {
+  background-color: $primary;
+}

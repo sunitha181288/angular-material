@@ -1,0 +1,92 @@
+<div class="search-panel">
+  <mat-grid-list cols="1" rowHeight="35">
+    <mat-grid-tile>
+      <div class="title">Material samples</div>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list cols="7" rowHeight="70" class="display-input" class="display-input" gutterSize="20">
+    <mat-grid-tile [colspan]="1">
+      <div class="form-group user">
+        <label for="user">USER</label>
+        <input matInput class="form-control input user-label" placeholder="Enter name or Id" id="user" [matAutocomplete]="auto" [formControl]="userControl" />
+        <img src="assets/icons/cancel.svg" *ngIf="userTextvalue" class="cancel-icon" aria-label="Clear" (click)="clearUserValues()">
+        <mat-autocomplete class="user-autocomplete" #auto="matAutocomplete">
+          <mat-option *ngFor="let user of users | filterUser:userTextvalue" [value]="user.name">
+            <span class="username">{{user.name}}</span>
+            <span class="usercode">{{user.code}}</span>
+          </mat-option>
+        </mat-autocomplete>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1">
+      <div class="form-group function">
+        <label for="function">FUNCTION</label>
+        <mat-form-field floatLabel="never" class="input-group">
+          <mat-select placeholder="Select Function" id="function">
+            <mat-option *ngFor="let option of functionOptions" [value]="option.name" [ngClass]="{'active':selectedFunctionItem === option}" (click)="onSelectFunction(option)">
+              {{option.name}}
+            </mat-option>
+          </mat-select>
+          <img class="material-icons chevron-down-torq select-chevron" src="assets/icons/dropdown-chevron.svg" />
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" style="margin-left: 50px;">    
+      <div class="form-group">
+        <label for="startdate">START DATE</label>
+        <div class="input-group icon" (click)="onStartDateFocus(startDatePicker);">
+          <i class="icon date" [ngClass]="{'selected': startDate}"></i>
+          <input matInput #startDateInput [matDatepicker]="startDatePicker" placeholder="mm/dd/yyyy" md-hide-icons="calendar" class="form-control date input" (click)="onStartDateFocus(startDatePicker)"
+          [value]="startDate" id="startdate" [ngModel]="startDate |  date: 'MM/dd/yyyy'"/>
+          <mat-datepicker #startDatePicker [ngClass]="{'show': showStartDate}"></mat-datepicker>
+        </div>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" class="adjust-timer" style="margin-left: 50px;">     
+      <div class="form-group time-group" [ngClass]="{'disable': !startDate}">
+        <label for="starttime">START TIME</label>
+        <div class="input-group icon time-picker" (click)="onStartTimeFocus()">
+          <i class="icon time" [ngClass]="{'selected': startTime}"></i>
+          <input type="text" (ngModelChange)="onChangeStartTime($event)" id="starttime" placeholder="hh:mm" class="form-control time input" [ngModel]="startTime | date: 'HH:mm'"/>
+          <timepicker [(ngModel)]="startTime" class="timepicker" [ngClass]="{'show': showStartTime}" [showSpinners]="true"></timepicker>
+        </div>
+      </div>
+    </mat-grid-tile>    
+    <mat-grid-tile [colspan]="1" class="adjust-picker" style="margin-left: 50px;">     
+      <div class="form-group" [ngClass]="{'disable': !startDate}">
+        <label for="enddate">END DATE</label>
+        <div class="input-group icon" (click)="onEndDateFocus(endDatePicker);">
+          <i class="icon date" [ngClass]="{'selected': endDate}"></i>
+          <input matInput #endDateInput [matDatepicker]="endDatePicker" placeholder="mm/dd/yyyy" md-hide-icons="calendar" class="form-control date input" (click)="onEndDateFocus(endDatePicker);"
+          [value]="endDate"  [ngModel]="endDate |  date: 'MM/dd/yyyy'" id="enddate" [min]="startDate"/>
+          <mat-datepicker #endDatePicker [ngClass]="{'show': showStartDate}"></mat-datepicker>
+        </div>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" class="adjust-picker" style="margin-left: 50px;">     
+      <div class="form-group time-group" [ngClass]="{'disable': !endDate}">
+        <label for="endtime">END TIME</label>
+        <div class="input-group icon time-picker" (click)="onEndTimeFocus()">
+          <i class="icon time" [ngClass]="{'selected': endTime}"></i>
+          <input type="text" (ngModelChange)="onChangeEndTime($event)" placeholder="hh:mm" class="form-control time input" id="endtime" [ngModel]="endTime | date: 'HH:mm'"/>
+        <timepicker [(ngModel)]="endTime" class="timepicker" [ngClass]="{'show': showEndTime}" [showSpinners]="true"></timepicker>
+        </div>
+      </div>
+    </mat-grid-tile> 
+  </mat-grid-list>
+  <br>
+  <mat-grid-list cols="17" rowHeight="40px" gutterSize="20">
+    <mat-grid-tile [colspan]="12"></mat-grid-tile>
+    <mat-grid-tile [colspan]="2">
+      <div class="buttons">
+        <button mat-button name="search" class="search" [ngClass]="{'disable-search-btn' : !isSearch}">search</button>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2">
+      <div class="buttons">
+        <button mat-button name="clear" class="clear" [ngClass]="{'disable-clear-btn' : !isSearch}">clear</button>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+<div class="backdrop" *ngIf="showEndDate ||showStartTime || showEndTime || showStartDate" (click)="onCloseTimePicker()"></div>

@@ -1,0 +1,69 @@
+.mat-autocomplete-panel {
+    min-width: $input-width !important;
+}
+
+.user-autocomplete {
+    .mat-option {
+      &.mat-selected {
+        &:hover {
+          background-color: $primary;
+  
+          .mat-option-text {
+            .usercode,
+            .username {
+              color: $white;
+            }
+          }
+        }
+      }
+  
+      &:hover {
+        background-color: $primary;
+  
+        .mat-option-text {
+          .usercode,
+          .username {
+            color: $white;
+          }
+        }
+      }
+  
+      .mat-option-text {
+        line-height: normal;
+        display: grid;
+  
+        .username {
+          font-size: $font-size;
+          color: $black;
+          font-family: $roboto-font;
+        }
+  
+        .usercode {
+          font-size: $profile-name-font;
+          color: $black;
+          font-family: $roboto-font;
+        }
+      }
+    }
+}
+
+.cancel-icon {
+    margin-top: -26px;
+    float: right;
+    width: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+}
+  
+.mat-autocomplete-panel.mat-autocomplete-visible {
+    margin-top: 10px;
+}
+  
+input.mat-input-element { 
+    margin-top: 0px;
+}  
+
+.mat-option { 
+    min-width: $input-width !important;
+}

@@ -1,0 +1,40 @@
+//color variables
+$white: #FFFFFF;
+$primary: #508BE4;
+$black: #000000;
+$hover-blue: #F7F7FB;
+$primary-outline: #C7D4DD;
+$light-blue:#D6DFEC;
+$light-blue3:#57657A;
+$dropdown-click-color:#C5C5C8;
+$container-color: linear-gradient(-176deg, $white 0%, $light-blue 100%);
+$placeholder-color: #DEDEDE;
+
+//font variables
+$font-size: 15px;
+$dropdown-font: 14px;
+$roboto-slab-font: 'Roboto Slab';
+$roboto-font: 'Roboto';
+$profile-name-font: 13px;
+$minor-font: 12px;
+$font-weight-normal: 400 !default;
+$title-font: 20px;
+$header-font: 24px;
+
+//navbar variables
+$dropdown-box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.20);
+$header-footer-box-shadow: 0 1px 10px 0 rgba(87,101,122,0.27);
+$nav-height: 50px;
+
+//button variables
+$clear-clicked: #C5C5C8;
+$clear-hover: #DDDDE1;
+$search-hover: #4476C2;
+$search-clicked: #3861A0;
+$button-height: 35px;
+
+//footer variables
+$footer-height: 40px;
+
+//Material input variables
+$input-width : 210px;
